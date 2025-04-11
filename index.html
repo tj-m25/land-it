@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/73bd006934.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <style>
+        @keyframes slide {
+            0% { opacity: 0; transform: translateY(100%); }
+            5% { opacity: 1; transform: translateY(0); }
+            25% { opacity: 1; transform: translateY(0); }
+            30% { opacity: 0; transform: translateY(-100%); }
+            100% { opacity: 0; transform: translateY(-100%); }
+        }
+        .promo-item:nth-child(1) { animation-delay: 0s; }
+        .promo-item:nth-child(2) { animation-delay: 4s; }
+        .promo-item:nth-child(3) { animation-delay: 8s; }
+        .promo-item:nth-child(4) { animation-delay: 12s; }
+    </style>
+</head>
+<body class="font-['Trebuchet_MS','Lucida_Sans_Unicode','Lucida_Grande','Lucida_Sans',Arial,sans-serif] scroll-smooth">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-5 bg-white text-black">
+        <div class="text-3xl font-bold">Nike</div>
+        <nav class="hidden md:block">
+            <ul class="flex items-center space-x-6">
+                <li>
+                    <form action="search" method="get" class="relative">
+                        <input type="search" placeholder="Search..." aria-label="Search" 
+                               class="py-1 px-3 pr-8 rounded border border-gray-300">
+                        <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </li>
+                <li><a href="#home" class="hover:text-gray-700"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#shop" class="hover:text-gray-700"><i class="fa-solid fa-shop"></i></a></li>
+                <li><a href="#contact" class="hover:text-gray-700"><i class="fa-solid fa-phone"></i></a></li>
+                <li><a href="#" class="hover:text-gray-700"><i class="fa-solid fa-list"></i></a></li>
+            </ul>
+        </nav>
+        <button class="md:hidden">
+            <div class="menu-icon flex flex-col w-8">
+                <div class="line h-1 w-full bg-black my-1 transition-all duration-300"></div>
+                <div class="line h-1 w-full bg-black my-1 transition-all duration-300"></div>
+                <div class="line h-1 w-full bg-black my-1 transition-all duration-300"></div>
+            </div>
+        </button>
+    </header>
+
+    <!-- Promo Banner -->
+    <section class="promo relative overflow-hidden h-12 bg-gray-100 text-center text-base font-bold leading-[3rem]">
+        <div class="promo-item absolute w-full top-0 left-0 opacity-0 animate-[slide_16s_infinite]">
+            New Styles on Sale: Up to 40% Off <a href="#" class="underline hover:no-underline">Shop All Our New Markdowns</a>
+        </div>
+        <div class="promo-item absolute w-full top-0 left-0 opacity-0 animate-[slide_16s_infinite]">
+            Enjoy 15% off on the Nike App. USE: APP15 <a href="#" class="underline hover:no-underline">Learn More</a>
+        </div>
+        <div class="promo-item absolute w-full top-0 left-0 opacity-0 animate-[slide_16s_infinite]">
+            Teachers and Students Get 10% Off <a href="#" class="underline hover:no-underline">Learn More</a>
+        </div>
+        <div class="promo-item absolute w-full top-0 left-0 opacity-0 animate-[slide_16s_infinite]">
+            Free Shipping on Orders Over $50 <a href="#" class="underline hover:no-underline">Shop Now</a>
+        </div>
+    </section>    
+    
+    <!-- Hero Section -->
+    <section class="relative flex justify-center items-center h-[60vh] text-black text-center" id="home">
+        <div class="absolute inset-0 bg-[url('https://i.pinimg.com/originals/ba/1e/0e/ba1e0e455257be613da6e7fcdf095e04.jpg')] bg-cover bg-center opacity-50"></div>
+        <div class="relative z-10 hero-content">
+          <h1 class="text-5xl m-0">Just Do It.</h1>
+          <p class="text-2xl my-2.5 mx-0">Discover the latest styles and innovations from Nike.</p>
+          <button class="py-2.5 px-5 text-base bg-black text-white font-bold border-none cursor-pointer hover:bg-gray-700">
+            Shop Now
+          </button>
+        </div>
+      </section>
+      
+
+    <!-- Why Choose Nike -->
+    <section class="why-choose-nike py-10 px-5 text-center">
+        <h2 class="text-3xl mb-5">Why Choose Nike?</h2>
+        <div class="benefits-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="benefit p-6">
+                <i class="fa-solid fa-check text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">Quality Materials</h3>
+                <p>Our products are made with premium materials for durability and comfort.</p>
+            </div>
+            <div class="benefit p-6">
+                <i class="fa-solid fa-truck text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">Fast Shipping</h3>
+                <p>Get your orders delivered quickly and reliably.</p>
+            </div>
+            <div class="benefit p-6">
+                <i class="fa-solid fa-heart text-3xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-3">Sustainable Practices</h3>
+                <p>We are committed to reducing our environmental impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products py-10 px-5 text-center">
+        <h2 class="text-3xl mb-5">Featured Products</h2>
+        <div class="product-grid grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div class="product cursor-pointer mb-8 border border-gray-300 p-4 text-center hover:shadow-lg">
+                <a href="item_details.html">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5a8dec33-c0a3-4540-8c99-fc57f298a9b0/NIKE+CORTEZ.png" 
+                         alt="Product 1" class="w-full h-auto max-h-64 object-contain transition-opacity duration-300 hover:opacity-70">
+                </a>
+                <h3 class="text-xl mt-3">Cortez</h3>
+                <button class="atb-btn mt-2.5 py-2.5 px-5 bg-black text-white border-none cursor-pointer hover:opacity-70">
+                    Add to Bag
+                </button>
+            </div>
+            <div class="product cursor-pointer mb-8 border border-gray-300 p-4 text-center hover:shadow-lg">
+                <a href="killshot.html">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4e0f6d2a-62c3-47c0-8272-57bde95ca6c8/KILLSHOT+2+LEATHER.png" 
+                         alt="Product 2" class="w-full h-auto max-h-64 object-contain transition-opacity duration-300 hover:opacity-70">
+                </a>
+                <h3 class="text-xl mt-3">Killshot</h3>
+                <button class="atb-btn mt-2.5 py-2.5 px-5 bg-black text-white border-none cursor-pointer hover:opacity-70">
+                    Add to Bag
+                </button>
+            </div>
+            <div class="product cursor-pointer mb-8 border border-gray-300 p-4 text-center hover:shadow-lg">
+                <a href="nike_vomero.html">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0c1e5173-ecc6-4358-aafe-526ca0b12a16/W+NIKE+ZOOM+VOMERO+5.png" 
+                         alt="Product 3" class="w-full h-auto max-h-64 object-contain transition-opacity duration-300 hover:opacity-70">
+                </a>
+                <h3 class="text-xl mt-3">Nike Vomero Lifestyle Shoes</h3>
+                <button class="atb-btn mt-2.5 py-2.5 px-5 bg-black text-white border-none cursor-pointer hover:opacity-70">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-10 px-5 bg-white">
+        <h2 class="text-3xl text-center mb-5">What Our Customers Say</h2>
+        <div class="testimonials-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="testimonial bg-gray-50 p-6 rounded text-center">
+                <p class="italic mb-4">"The best shoes I've ever owned! Comfortable and stylish."</p>
+                <p class="font-semibold">- John D.</p>
+            </div>
+            <div class="testimonial bg-gray-50 p-6 rounded text-center">
+                <p class="italic mb-4">"Fast shipping and great customer service. Highly recommend!"</p>
+                <p class="font-semibold">- Sarah L.</p>
+            </div>
+            <div class="testimonial bg-gray-50 p-6 rounded self-center text-center">
+                <p class="italic mb-4">"Nike never disappoints. Love their sustainable initiatives."</p>
+                <p class="font-semibold">- Mike T.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-10 px-5 text-center bg-black text-white">
+        <h2 class="text-3xl mb-4">Stay Updated</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+        <form class="max-w-md mx-auto flex">
+            <input type="email" placeholder="Enter your email" required 
+                   class="flex-grow py-3 px-4 rounded-l text-black">
+            <button type="submit" class="bg-white-600 hover:bg-red-700 py-3 px-6 rounded-r font-semibold">
+                Subscribe
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-300 text-black py-5 px-5 text-center mt-5" id="contact">
+        <p>Contact us: </p>
+        <ul class="flex justify-center items-center py-5 gap-5 list-none m-0">
+            <li><a href="https://www.facebook.com/nike/" class="text-black hover:text-gray-700"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/nike/" class="text-black hover:text-gray-700"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/Nike" class="text-black hover:text-gray-700"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.nike.com/help/" class="text-black hover:text-gray-700"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+        <p class="mb-2">
+            <a href="#" class="hover:underline">Terms & Conditions</a> | <a href="#" class="hover:underline">Privacy Policy</a>
+        </p>
+        <p>&copy; 2023 Nike, Inc. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
