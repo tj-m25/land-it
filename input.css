@@ -1,0 +1,291 @@
+
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+
+}
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    margin: 20px;
+}
+
+.line {
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: none;         
+}
+
+nav.active {
+    display: block; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+header input[type="search"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.promo {
+    position: relative;
+    overflow: hidden;
+    height: 50px; 
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.promo .promo-item {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: slide 16s infinite;
+}
+
+.promo .promo-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.promo .promo-item:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.promo .promo-item:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.promo .promo-item:nth-child(4) {
+    animation-delay: 12s;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    5% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+a {
+    color: black
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background: url('https://pics.craiyon.com/2023-11-06/15a37f489efc499fba8c7fddfdf120bf.webp') no-repeat center center/cover;
+    color: #000000;
+    text-align: center;
+}
+
+.banner_description {
+    justify-content: center;
+    text-align: center;
+}
+.banner_description h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.banner_description p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.banner_description button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(0, 0, 0);
+    color: #fffefe;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #bdbdbd;
+    color: #ffff;
+}
+
+.featured-products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured-products h2 {
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.product img {
+    transition: 0.3s all;
+
+    max-width: 100%;
+    height: auto;
+}
+
+.product button {
+.product:hover img {
+    opacity: 0.7;
+}
+}
+
+.product .atb-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.product:hover .atb-btn{
+    opacity: 0.7;
+}
+
+footer {
+    background-color: #d6d6d6;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: #d6d6d6;
+    color: #000000;
+    list-style: none;
+    margin: 0;
+
+}
+footer a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+
+.item-details {
+    position: left;
+    right: 50px;
+}
