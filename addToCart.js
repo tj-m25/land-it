@@ -33,6 +33,10 @@ function closeCart() {
     cartModal.style.display = 'none'; 
 }
 const products = [
+     { name: 'Product 1' },
+    { name: 'Product 2' }
+];
+
     {
         name: 'Cortez',
         detailsPage: 'item_details.html',
