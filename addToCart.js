@@ -5,7 +5,13 @@ let cart = [];
 function addToCart(product) {
     cart.push(product);
     console.log(`${product.name} has been added to your cart.`);
-    // Optionally, you can update the cart display here
+    updateCartCount();
+}
+
+// Function to update the cart count display
+function updateCartCount() {
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = cart.length; // Update the cart count
 }
 
 // Product data (you can also fetch this from a server or database)
