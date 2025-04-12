@@ -11,10 +11,27 @@ function addToCart(product) {
 
 function updateCartCount() {
     const cartCountElement = document.getElementById('cart-count');
-    cartCountElement.textContent = cart.length; // Update the cart count
+    cartCountElement.textContent = cart.length; 
 }
 
+function showCart() {
+    const cartModal = document.getElementById('cart-modal');
+    const cartItemsElement = document.getElementById('cart-items');
+    cartItemsElement.innerHTML = '';
 
+    cart.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = item.name; 
+        cartItemsElement.appendChild(li);
+    });
+
+    cartModal.style.display = 'block';
+}
+
+function closeCart() {
+    const cartModal = document.getElementById('cart-modal');
+    cartModal.style.display = 'none'; 
+}
 const products = [
     {
         name: 'Cortez',
@@ -43,3 +60,7 @@ document.querySelectorAll('.atb-btn').forEach((button, index) => {
         window.location.href = product.detailsPage;
     });
 });
+
+document.getElementById('cart-icon').addEventListener('click', showCart);
+
+document.getElementById('close-modal').addEventListener('click', closeCart);
