@@ -1,20 +1,20 @@
-// Initialize an empty cart
+
 let cart = [];
 
-// Function to add a product to the cart
+
 function addToCart(product) {
     cart.push(product);
     console.log(`${product.name} has been added to your cart.`);
     updateCartCount();
 }
 
-// Function to update the cart count display
+
 function updateCartCount() {
     const cartCountElement = document.getElementById('cart-count');
     cartCountElement.textContent = cart.length; // Update the cart count
 }
 
-// Product data (you can also fetch this from a server or database)
+
 const products = [
     {
         name: 'Cortez',
@@ -33,13 +33,13 @@ const products = [
     }
 ];
 
-// Add event listeners to "Add to Bag" buttons
+
 document.querySelectorAll('.atb-btn').forEach((button, index) => {
     button.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default button behavior
-        const product = products[index]; // Get the corresponding product
-        addToCart(product); // Add the product to the cart
-        // Optionally, redirect to the product details page
+        event.preventDefault(); 
+        const product = products[index]; 
+        addToCart(product); 
+        
         window.location.href = product.detailsPage;
     });
 });
