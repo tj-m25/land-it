@@ -34,6 +34,15 @@ nav ul li a {
     text-decoration: none;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .cart-icon {
     position: relative;
     display: inline-block;
