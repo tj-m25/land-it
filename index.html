@@ -9,11 +9,8 @@
     <script src="https://kit.fontawesome.com/73bd006934.js" crossorigin="anonymous"></script>
     <script src="addToCart.js" defer></script>
      <style>
-        /* Existing styles... */
-
-        /* Basic styles for the cart modal */
         .cart-modal {
-            display: none; /* Hidden by default */
+            display: none; 
             position: fixed;
             z-index: 1;
             left: 0;
@@ -88,6 +85,14 @@
                     <div class="cart-icon">
                         <i class="fa-solid fa-shopping-cart"></i>
                         <span id="cart-count">0</span>
+                    </div>
+                       <!-- Cart Modal -->
+                    <div id="cart-modal" class="cart-modal">
+                        <div class="cart-content">
+                            <span class="close" id="close-modal">&times;</span>
+                            <h2>Your Cart</h2>
+                            <ul id="cart-items"></ul>
+                        </div>
                     </div>
                 </li>
             </ul>
